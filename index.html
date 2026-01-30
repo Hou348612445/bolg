@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>侯先生的Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+<!-- Header -->
+<header class="bg-gradient-to-r from-blue-500 to-indigo-600 shadow-lg py-6 px-4 md:px-10 flex justify-between items-center">
+    <h1 class="text-white text-3xl font-bold">侯先生的 Blog</h1>
+    <nav class="space-x-4 hidden md:block">
+        <a href="#" class="text-white hover:text-yellow-300 transition duration-300"><i class="fas fa-home mr-1"></i>首页</a>
+        <a href="#about" class="text-white hover:text-yellow-300 transition duration-300"><i class="fas fa-user-alt mr-1"></i>关于我</a>
+        <a href="#contact" class="text-white hover:text-yellow-300 transition duration-300"><i class="fas fa-envelope mr-1"></i>联系</a>
+    </nav>
+    <!-- Mobile menu button -->
+    <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+        <i class="fas fa-bars text-xl"></i>
+    </button>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden bg-blue-500 p-4 space-y-3 md:hidden">
+    <a href="#" class="block text-white hover:text-yellow-300 transition duration-300"><i class="fas fa-home mr-1"></i> 首页</a>
+    <a href="#about" class="block text-white hover:text-yellow-300 transition duration-300"><i class="fas fa-user-alt mr-1"></i> 关于我</a>
+    <a href="#contact" class="block text-white hover:text-yellow-300 transition duration-300"><i class="fas fa-envelope mr-1"></i> 联系</a>
+</div>
+
+<main class="max-w-6xl mx-auto mt-10 mb-20 grid grid-cols-1 lg:grid-cols-3 gap-8 px-4">
+
+    <!-- Posts Section -->
+    <section class="lg:col-span-2">
+        <h2 class="text-2xl font-semibold border-b pb-2 mb-6">最新文章</h2>
+        
+        <!-- Post Card Example -->
+        <article class="post-card bg-white rounded-xl shadow-md overflow-hidden mb-6 transition-all duration-300 ease-in-out">
+            <img src="https://picsum.photos/id/10/800/400" alt="科技改变生活封面图" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <span class="inline-block px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm font-medium mb-2">技术分享</span>
+                <h3 class="text-xl font-bold mb-2">科技是如何悄悄地改变了我们的生活方式？</h3>
+                <p class="text-gray-600 mb-4">从智能手机到人工智能助手，科技正在以前所未有的速度重塑我们日常生活的方方面面...</p>
+                <a href="#" class="text-blue-600 hover:underline font-medium">阅读全文 →</a>
+            </div>
+        </article>
+
+        <article class="post-card bg-white rounded-xl shadow-md overflow-hidden mb-6 transition-all duration-300 ease-in-out">
+            <img src="https://picsum.photos/id/180/800/400" alt="旅行摄影风景照" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <span class="inline-block px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm font-medium mb-2">生活随笔</span>
+                <h3 class="text-xl font-bold mb-2">一次说走就走的城市漫步之旅</h3>
+                <p class="text-gray-600 mb-4">在这个快节奏的时代里，偶尔放慢脚步去感受城市的温度，也许能发现不一样的美好...</p>
+                <a href="#" class="text-blue-600 hover:underline font-medium">阅读全文 →</a>
+            </div>
+        </article>
+
+        <article class="post-card bg-white rounded-xl shadow-md overflow-hidden mb-6 transition-all duration-300 ease-in-out">
+            <img src="https://picsum.photos/id/1015/800/400" alt="读书笔记插图" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <span class="inline-block px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm font-medium mb-2">阅读心得</span>
+                <h3 class="text-xl font-bold mb-2">《未来简史》读后思考——人类未来的可能性边界</h3>
+                <p class="text-gray-600 mb-4">尤瓦尔·赫拉利在这本书中探讨了生物技术和信息技术的发展将如何影响人类社会的走向...</p>
+                <a href="#" class="text-blue-600 hover:underline font-medium">阅读全文 →</a>
+            </div>
+        </article>
+    </section>
+
+    <!-- Sidebar -->
+    <aside class="space-y-8">
+        <!-- About Me Widget -->
+        <div id="about" class="bg-white p-6 rounded-xl shadow-md">
+            <h3 class="font-bold text-lg mb-4">关于我</h3>
+            <img src="https://picsum.photos/id/237/200/200" alt="博主头像照片" class="rounded-full w-24 h-24 mx-auto mb-4">
+            <p class="text-gray-600 leading-relaxed">你好！我是侯先生，一名热爱写作和技术探索的内容创作者。在这里我会记录我的学习旅程、人生感悟以及一些有趣的想法。</p>
+        </div>
+
+        <!-- Categories -->
+        <div class="bg-white p-6 rounded-xl shadow-md">
+            <h3 class="font-bold text-lg mb-4">分类目录</h3>
+            <ul class="space-y-2">
+                <li><a href="#" class="flex justify-between hover:text-blue-600 transition-colors"><span>技术分享</span><span>(5)</span></a></li>
+                <li><a href="#" class="flex justify-between hover:text-blue-600 transition-colors"><span>生活随笔</span><span>(8)</span></a></li>
+                <li><a href="#" class="flex justify-between hover:text-blue-600 transition-colors"><span>阅读心得</span><span>(3)</span></a></li>
+                <li><a href="#" class="flex justify-between hover:text-blue-600 transition-colors"><span>旅行游记</span><span>(4)</span></a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div id="contact" class="bg-white p-6 rounded-xl shadow-md">
+            <h3 class="font-bold text-lg mb-4">联系方式</h3>
+            <ul class="space-y-2 text-gray-600">
+                <li class="flex items-center"><i class="fab fa-github mr-2 text-black"></i>Github: @houxiansen</li>
+                <li class="flex items-center"><i class="far fa-envelope mr-2 text-red-500"></i>Email: houxian@example.com</li>
+                <li class="flex items-center"><i class="fab fa-twitter mr-2 text-blue-400"></i>Twitter: @HouXianSen</li>
+            </ul>
+        </div>
+    </aside>
+</main>
+
+<footer class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-center py-6">
+    <p>&copy; 2026 侯先生的 Blog 版权所有 | 使用 <a href="https://tailwindcss.com/" target="_blank" class="underline">TailwindCSS</a> 构建</p>
+</footer>
+
+<script>
+document.getElementById('mobile-menu-button').addEventListener('click', function () {
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.remove('hidden');
+    } else {
+        mobileMenu.classList.add('hidden');
+    }
+});
+</script>
+</body>
+</html>
